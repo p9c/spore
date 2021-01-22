@@ -1,0 +1,55 @@
+package main
+
+import (
+	"fmt"
+	"net"
+	"time"
+	
+	qu "github.com/l0k18/OSaaS/pkg/quit"
+	
+	"github.com/l0k18/OSaaS/pkg/comm/transport"
+	log "github.com/l0k18/OSaaS/pkg/logi"
+	"github.com/l0k18/OSaaS/pkg/loop"
+)
+
+const (
+	TestMagic = "TEST"
+)
+
+var (
+	TestMagicB = []byte(TestMagic)
+)
+
+func main() {
+	log.L.SetLevel("trace", true, "pod")
+	Debug("starting test")
+	quit := qu.T()
+	var c *transport.Channel
+	var err error
+	if c, err = transport.NewBroadcastChannel("test", nil, "cipher",
+		1234, 8192, transport.Handlers{
+			TestMagic: func(ctx interface{}, src net.Addr, dst string,
+				b []byte) (err error) {
+				Infof("%s <- %s [%d] '%s'", src.String(), dst, len(b), string(b))
+				return
+			},
+		},
+		quit,
+	); Check(err) {
+		panic(err)
+	}
+	time.Sleep(time.Second)
+	var n int
+	loop.To(10, func(i int) {
+		text := []byte(fmt.Sprintf("this is a test %d", i))
+		Infof("%s -> %s [%d] '%s'", c.Sender.LocalAddr(), c.Sender.RemoteAddr(), n-4, text)
+		if err = c.SendMany(TestMagicB, transport.GetShards(text)); Check(err) {
+		} else {
+		}
+	})
+	time.Sleep(time.Second * 5)
+	if err = c.Close(); !Check(err) {
+		time.Sleep(time.Second * 1)
+	}
+	quit.Q()
+}
