@@ -1,29 +1,21 @@
 # OSaaS
 
-###### Operating System as a Service
+Operating System as a Service
 
-Bridging the gap between physical hardware, and the often unresolveable lock-in of vendor operating systems, second level solutions can create an environment and aggregate an application development pool together that can eventually displace the rigid base level of operating software in use.
+Building on the principles of distributed systems, and the legacy of Unix and Plan 9 operating systems, OSaaS aims to become a testbed for fracturing the concept of operating system completely.
 
-### Why is this important?
+## Von Neumann Doesn't Live Here Anymore
 
-In the context of the emergence of broad scale, open, decentralised public network systems, there is a concurrent need to change the base upon which the systems run, in order to better leverage the benefits of participating in and making use of these systems.
+Remarkably, as his model of a computation engine ages the lack of reproach towards its false and now increasingly irrelevant assumptions, the name is still very important. Yes, because there will always be small processing units, that have to be sub-nanosecond synchronised.
 
-However, platforms have a property in which nobody can afford to not have one underneath them, and new systems, to be useful, especially distributed systems, need a large number of participants.
+But for everything else, we have a spectrum of different levels of latency and synchronisation problems to deal with.
 
-Writing an application to connect to these network systems therefore ends up requiring the building of multiple, often differently functioning implementations of user interface. While making good libraries that abstract the concrete implementations for such things as input and output and storage and other device access, is a big step, the field and the characteristics of the network go hand in hand with changes in how the user approaches the interface and thus also how the data interacts with the interests of the user.
+### OSaaS is that everything else.
 
-## Components
+As a means to experimenting with the topology and architecture of processing systems, this project is built on Go, uses a master controller interface GUI that runs the workers who communicate to common channels via the controlling interface.
 
-1. Single thread, scheduled execution engine that accepts Go Plugin standard API 'executables' with an OSaaS API interface design that defines capabilities and privileges (user granted right to this, where it is sensitive or optional). 
+Executables are thus the form that Go can execute without recompilation - plugins - and for this there must be a shell-like abstraction for command invocation and parameter specification.
 
-2. Top level GUI controller (where the rendering and input capture will live) and run code that has been compiled as a Go plugin, the plugins will stream their GUI state updates as serialized Gio Ops, and inputs will be fed back to them where there is routing that filters by various states such as focus and regional boundaries. This is done via serializing the signals that in current Gio implementation occur over channels. OS and plugin pipes are able to provide delivery guarantees, simplifying this part of the logic.
-  
-3. Each process server will run within its own single thread of execution. Determining scheduling between competing child processes will be based on a static analysis of the various types of signals the code causes to be emitted - such as the difference between a memory access, cache access, disk access and network access. Consequently, also, this imposes a requirement that plugins are very small and single purpose, similar in theory to the Unix CLI interface model, but as a GUI enabled, pluggable, concurrent and parallel system, with simple integration to become distributed.
-  
-4. The scheduler will favour low latency jobs on a frequent basis, and attempt to pack the rest of the schedule with the remainder in progressive priority, but randomly, other than this criteria.
-  
-This system then represents a single thread of execution server, and it can be run on top of another system no less than it could run stand-alone. The execution environment will statically define its working bootstrap state in order to allow the garbage collector to operate.
+As is conventional and for reasons of good UX, the initial implementation only works with read/write pipes (stdio) and renders strings that will be wrapped automatically if not constrained, however these outputs streams will be multiplexed and filtered for display for the user.
 
-## Initial work
-
-The initial work is to create the basic plugin execution environment and define a designated entrypoint that runs inside the statically declared initial execution environment. This essentially mainly is about implementing channels as a sort of IPC mechanism though obviously it is always in-process and there will need to be an interruption capability that can pause a process in order to process, for example, inputs, or trigger a display paint, or feed an audio buffer.
+Parameter formats will have interface translators and an input field will allow the user to specify a given available call with tab-completion, it will function a lot like a shell but a stream of text will be side by side with any other output modality that is implemented later, which will be the pipe-ified Gio Ops and Events.
