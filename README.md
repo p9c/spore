@@ -1,3 +1,6 @@
+![https://raw.githubusercontent.com/l0k18/OSaaS/main/docs/svg/logo.svg](https://raw.githubusercontent.com/l0k18/OSaaS/main/docs/svg/logo.svg)
+
+
 # OSaaS
 
 Operating System as a Service
