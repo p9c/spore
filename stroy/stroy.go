@@ -4,7 +4,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/l0k18/spore/pkg/util/datadir"
+	"github.com/l0k18/spore/pkg/log"
+	"github.com/l0k18/spore/pkg/util"
 	"gopkg.in/src-d/go-git.v4"
 	"io/ioutil"
 	"os"
@@ -13,7 +14,6 @@ import (
 	"strings"
 	"time"
 	
-	"github.com/l0k18/spore/pkg/util/helpers"
 	
 	"gopkg.in/src-d/go-git.v4/plumbing"
 	"gopkg.in/src-d/go-git.v4/plumbing/storer"
@@ -24,15 +24,15 @@ func populateVersionFlags() bool {
 	BuildTime = time.Now().Format(time.RFC3339)
 	var cwd string
 	var err error
-	if cwd, err = os.Getwd(); Check(err) {
+	if cwd, err = os.Getwd(); log.Check(err) {
 		return false
 	}
 	var repo *git.Repository
-	if repo, err = git.PlainOpen(cwd); Check(err) {
+	if repo, err = git.PlainOpen(cwd); log.Check(err) {
 		return false
 	}
 	var rr []*git.Remote
-	if rr, err = repo.Remotes(); Check(err) {
+	if rr, err = repo.Remotes(); log.Check(err) {
 		return false
 	}
 	// spew.Dump(rr)
@@ -77,7 +77,7 @@ func populateVersionFlags() bool {
 	// }); Check(err) {
 	// }
 	var rh *plumbing.Reference
-	if rh, err = repo.Head(); Check(err) {
+	if rh, err = repo.Head(); log.Check(err) {
 		return false
 	}
 	rhs := rh.Strings()
@@ -110,7 +110,7 @@ func populateVersionFlags() bool {
 	// 	return false
 	// }
 	var rt storer.ReferenceIter
-	if rt, err = repo.Tags(); Check(err) {
+	if rt, err = repo.Tags(); log.Check(err) {
 		return false
 	}
 	// latest := time.Time{}
@@ -142,7 +142,7 @@ func populateVersionFlags() bool {
 			// 	pr.Target(), pr.Type())
 			return nil
 		},
-	); Check(err) {
+	); log.Check(err) {
 		return false
 	}
 	if !maxIs {
@@ -224,13 +224,13 @@ func main() {
 				)
 				// Info(split)
 				var cmd *exec.Cmd
-				scriptPath := filepath.Join(datadir.Get("stroy", false), "stroy.sh")
-				helpers.EnsureDir(scriptPath)
+				scriptPath := filepath.Join(util.Dir("stroy", false), "stroy.sh")
+				util.EnsureDir(scriptPath)
 				if err = ioutil.WriteFile(
 					scriptPath,
 					[]byte(strings.Join(split, " ")),
 					0700,
-				); Check(err) {
+				); log.Check(err) {
 				} else {
 					cmd = exec.Command("sh", scriptPath)
 					cmd.Stdout = os.Stdout
@@ -240,11 +240,10 @@ func main() {
 				if cmd == nil {
 					panic("cmd is nil")
 				}
-				if err := cmd.Start(); Check(err) {
-					Infos(err)
+				if err := cmd.Start(); log.Check(err) {
 					os.Exit(1)
 				}
-				if err := cmd.Wait(); Check(err) {
+				if err := cmd.Wait(); log.Check(err) {
 					os.Exit(1)
 				}
 			}
@@ -280,11 +279,6 @@ func GetVersion() string {
 		"app information: repo: %s branch: %s commit: %s built"+
 			": %s tag: %s...\n", URL, GitRef, GitCommit, BuildTime, Tag,
 	)
-}
-
-type command struct {
-	name string
-	args []string
 }
 
 var ldFlags []string

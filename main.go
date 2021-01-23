@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/l0k18/spore/cmd/spore"
-	"github.com/l0k18/spore/pkg/util/logi"
+	"github.com/l0k18/spore/pkg/log"
 	"github.com/l0k18/spore/version"
 	"os"
 )
@@ -15,7 +15,7 @@ func main() {
 	version.BuildTime = BuildTime
 	version.Tag = Tag
 	version.Get = GetVersion
-	logi.L.SetLevel("debug", false, "spore")
+	log.SetLogLevel("debug")
 	Debug(version.Get())
 	s := spore.New()
 	result := s.Main()
