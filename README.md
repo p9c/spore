@@ -1,6 +1,6 @@
-![https://raw.githubusercontent.com/l0k18/OSaaS/main/docs/svg/logo.svg](https://raw.githubusercontent.com/l0k18/OSaaS/main/docs/svg/logo.svg)
+![https://raw.githubusercontent.com/l0k18/spore/main/docs/svg/logo.svg](https://raw.githubusercontent.com/l0k18/spore/main/docs/svg/logo.svg)
 
-# OSaaS
+# Spore
 
 Operating System as a Service
 
@@ -12,7 +12,7 @@ Remarkably, as his model of a computation engine ages the lack of reproach towar
 
 But for everything else, we have a spectrum of different levels of latency and synchronisation problems to deal with.
 
-### OSaaS is that everything else.
+### `spore` is that everything else.
 
 As a means to experimenting with the topology and architecture of processing systems, this project is built on Go, uses a master controller interface GUI that runs the workers who communicate to common channels via the controlling interface.
 
