@@ -33,14 +33,20 @@ var (
 )
 
 func GetVersion() string {
+	var err error
+	var wd string
+	if wd, err = os.Getwd(); Check(err) {
+	}
 	return fmt.Sprintf(
-		`Application Information
+		`application information:
+	working directory: %s
+	command: '%s'
 	repo: %s
 	branch: %s
 	commit: %s
 	built: %s
 	tag: %s
 `,
-		URL, GitRef, GitCommit, BuildTime, Tag,
+		wd, os.Args[0], URL, GitRef, GitCommit, BuildTime, Tag,
 	)
 }
