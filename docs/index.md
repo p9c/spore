@@ -1,4 +1,4 @@
-# ![https://raw.githubusercontent.com/l0k18/OSaaS/main/docs/svg/logo.svg](https://raw.githubusercontent.com/l0k18/OSaaS/main/docs/svg/logo.svg) OSaaS
+# ![https://raw.githubusercontent.com/l0k18/OSaaS/main/docs/svg/logo.svg](https://raw.githubusercontent.com/l0k18/OSaaS/main/docs/svg/logo.svg) spore
 
 ###### Operating System as a Service
 
@@ -20,7 +20,7 @@ have to be sub-nanosecond synchronised.
 But... for everything else, we have a spectrum of different levels of latency 
 and synchronisation problems to deal with.
 
-### OSaaS is that everything else.
+### `spore` is that everything else.
 
 As a means to experimenting with the topology and architecture of processing 
 systems, this project is built on Go, uses a master controller interface GUI 
