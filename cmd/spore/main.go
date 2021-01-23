@@ -1,5 +1,8 @@
-package main
+package spore
 
-func main() {
-	
+import "fmt"
+
+func (s *Shell) Main() int {
+	fmt.Println("spore")
+	return 0
 }
