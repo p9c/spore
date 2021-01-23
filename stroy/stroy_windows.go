@@ -13,7 +13,7 @@ import (
 	"gopkg.in/src-d/go-git.v4/plumbing"
 	"gopkg.in/src-d/go-git.v4/plumbing/storer"
 	
-	"github.com/l0k18/spore/pkg/util/logi"
+	. "github.com/l0k18/spore/pkg/log"
 )
 
 var WindowsExec = func(split []string) (out *exec.Cmd) {
