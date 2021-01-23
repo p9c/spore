@@ -1,4 +1,4 @@
-package datadir
+package util
 
 import (
 	"os"
@@ -10,16 +10,17 @@ import (
 )
 
 // GetDataDir returns an operating system specific directory to be used for
-// storing application data for an application. See Get for more details. This
-// version takes an operating system argument primarily to enable the testing
-// package to properly test the function by forcing an operating system that is
-// not the currently one.
+// storing application data for an application.
+//
+// See Dir for more details. This unexported version takes an operating system
+// argument primarily to enable the testing package to properly test the
+// function by forcing an operating system that is not the currently one.
 func GetDataDir(goos, appName string, roaming bool) string {
 	if appName == "" || appName == "." {
 		return "."
 	}
-	// The caller really shouldn't prepend the appName with a period, but if they
-	// do, handle it gracefully by trimming it.
+	// The caller really shouldn't prepend the appName with a period, but if they do, handle it gracefully by trimming
+	// it.
 	appName = strings.TrimPrefix(appName, ".")
 	appNameUpper := string(unicode.ToUpper(rune(appName[0]))) + appName[1:]
 	appNameLower := string(unicode.ToLower(rune(appName[0]))) + appName[1:]
@@ -64,7 +65,7 @@ func GetDataDir(goos, appName string, roaming bool) string {
 	return "."
 }
 
-// Get returns an operating system specific directory to be used for storing
+// Dir returns an operating system specific directory to be used for storing
 // application data for an application. The appName parameter is the name of the
 // application the data directory is being requested for. This function will
 // prepend a period to the appName for POSIX style operating systems since that
@@ -79,12 +80,12 @@ func GetDataDir(goos, appName string, roaming bool) string {
 // application data profile (%APPDATA%) should be used instead of the local one
 // (%LOCALAPPDATA%) that is used by default. Example results:
 //
-//  dir := Get("myapp", false)
+//  dir := Dir("myapp", false)
 //
 //   POSIX (Linux/BSD): ~/.myapp
 //   Mac OS: $HOME/Library/Application Support/Myapp
 //   Windows: %LOCALAPPDATA%\Myapp
 //   Plan 9: $home/myapp
-func Get(appName string, roaming bool) string {
+func Dir(appName string, roaming bool) string {
 	return GetDataDir(runtime.GOOS, appName, roaming)
 }

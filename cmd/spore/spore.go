@@ -1,6 +1,8 @@
 package spore
 
-import "github.com/l0k18/spore/pkg/util/datadir"
+import (
+	"github.com/l0k18/spore/pkg/util"
+)
 
 type Shell struct {
 	dataDir string
@@ -8,7 +10,7 @@ type Shell struct {
 
 func New() *Shell {
 	s := &Shell{
-		dataDir: datadir.Get("spore", false),
+		dataDir: util.Dir("spore", false),
 	}
 	return s
 }

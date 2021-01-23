@@ -1,4 +1,4 @@
-package datadir_test
+package util_test
 
 import (
 	"os"
@@ -8,10 +8,10 @@ import (
 	"testing"
 	"unicode"
 	
-	"github.com/l0k18/spore/pkg/util/datadir"
+	"github.com/l0k18/spore/pkg/util"
 )
 
-// TestAppDataDir tests the API for Get to ensure it gives expected results for various operating systems.
+// TestAppDataDir tests the API for Dir to ensure it gives expected results for various operating systems.
 func TestAppDataDir(t *testing.T) {
 	// App name plus upper and lowercase variants.
 	appName := "myapp"
@@ -120,5 +120,5 @@ func TestAppDataDir(t *testing.T) {
 
 // TstAppDataDir makes the internal appDataDir function available to the test package.
 func TstAppDataDir(goos, appName string, roaming bool) string {
-	return datadir.GetDataDir(goos, appName, roaming)
+	return util.GetDataDir(goos, appName, roaming)
 }
