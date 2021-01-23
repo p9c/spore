@@ -1,14 +1,11 @@
 package main
 
 var Commands = map[string][]string{
-	"build": {
-		"go build -v",
+	"install": {
+		`go install -v %ldflags .`,
 	},
 	"windows": {
-		`go build -v -ldflags="-H windowsgui \"%ldflags"\"`,
-	},
-	"": {
-		``,
+		`go build -v -ldflags="-H windowsgui" %ldflags"`,
 	},
 	"stroy": {
 		"go install -v %ldflags ./stroy/.",

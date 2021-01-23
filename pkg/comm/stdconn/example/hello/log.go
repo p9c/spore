@@ -3,7 +3,7 @@ package main
 import (
 	"runtime"
 	
-	"github.com/l0k18/OSaaS/pkg/util/logi"
+	"github.com/l0k18/spore/pkg/util/logi"
 )
 
 var pkg string

@@ -3,14 +3,14 @@ package serve
 import (
 	"go.uber.org/atomic"
 	
-	"github.com/l0k18/OSaaS/pkg/util/interrupt"
-	qu "github.com/l0k18/OSaaS/pkg/util/quit"
+	"github.com/l0k18/spore/pkg/util/interrupt"
+	qu "github.com/l0k18/spore/pkg/util/quit"
 	
-	"github.com/l0k18/OSaaS/pkg/comm/pipe"
-	"github.com/l0k18/OSaaS/pkg/util/logi"
-	"github.com/l0k18/OSaaS/pkg/util/logi/Entry"
-	"github.com/l0k18/OSaaS/pkg/util/logi/Pkg"
-	"github.com/l0k18/OSaaS/pkg/util/logi/Pkg/Pk"
+	"github.com/l0k18/spore/pkg/comm/pipe"
+	"github.com/l0k18/spore/pkg/util/logi"
+	"github.com/l0k18/spore/pkg/util/logi/Entry"
+	"github.com/l0k18/spore/pkg/util/logi/Pkg"
+	"github.com/l0k18/spore/pkg/util/logi/Pkg/Pk"
 )
 
 func Log(quit qu.C, saveFunc func(p Pk.Package) (success bool), appName string) {

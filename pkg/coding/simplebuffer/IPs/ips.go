@@ -4,9 +4,9 @@ import (
 	"net"
 	"strings"
 
-	"github.com/l0k18/OSaaS/pkg/coding/simplebuffer"
-	"github.com/l0k18/OSaaS/pkg/coding/simplebuffer/IP"
-	"github.com/l0k18/OSaaS/pkg/comm/routeable"
+	"github.com/l0k18/spore/pkg/coding/simplebuffer"
+	"github.com/l0k18/spore/pkg/coding/simplebuffer/IP"
+	"github.com/l0k18/spore/pkg/comm/routeable"
 )
 
 type IPs struct {

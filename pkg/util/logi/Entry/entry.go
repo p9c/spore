@@ -6,11 +6,11 @@ import (
 
 	"github.com/davecgh/go-spew/spew"
 
-	"github.com/l0k18/OSaaS/pkg/coding/simplebuffer/String"
-	"github.com/l0k18/OSaaS/pkg/util/logi"
+	"github.com/l0k18/spore/pkg/coding/simplebuffer/String"
+	"github.com/l0k18/spore/pkg/util/logi"
 
-	"github.com/l0k18/OSaaS/pkg/coding/simplebuffer"
-	"github.com/l0k18/OSaaS/pkg/coding/simplebuffer/Time"
+	"github.com/l0k18/spore/pkg/coding/simplebuffer"
+	"github.com/l0k18/spore/pkg/coding/simplebuffer/Time"
 )
 
 var Magic = []byte{'e', 'n', 't', 'r'}

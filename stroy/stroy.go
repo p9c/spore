@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/l0k18/spore/pkg/util/datadir"
 	"gopkg.in/src-d/go-git.v4"
 	"io/ioutil"
 	"os"
@@ -13,13 +14,12 @@ import (
 	"strings"
 	"time"
 	
-	"github.com/l0k18/OSaaS/pkg/util/datadir"
-	"github.com/l0k18/OSaaS/pkg/util/helpers"
+	"github.com/l0k18/spore/pkg/util/helpers"
 	
 	"gopkg.in/src-d/go-git.v4/plumbing"
 	"gopkg.in/src-d/go-git.v4/plumbing/storer"
 	
-	"github.com/l0k18/OSaaS/pkg/util/logi"
+	"github.com/l0k18/spore/pkg/util/logi"
 )
 
 func populateVersionFlags() bool {
@@ -187,11 +187,11 @@ func main() {
 	}
 	if len(os.Args) > 1 {
 		folderName := "test0"
-		var datadir string
+		var dataDir string
 		if len(os.Args) > 2 {
-			datadir = os.Args[2]
+			dataDir = os.Args[2]
 		} else {
-			datadir = filepath.Join(home, folderName)
+			dataDir = filepath.Join(home, folderName)
 		}
 		if list, ok := Commands[os.Args[1]]; ok {
 			populateVersionFlags()
@@ -200,7 +200,7 @@ func main() {
 				// Info(list[i])
 				// inject the data directory
 				var split []string
-				out := strings.ReplaceAll(list[i], "%datadir", datadir)
+				out := strings.ReplaceAll(list[i], "%datadir", dataDir)
 				split = strings.Split(out, " ")
 				for i := range split {
 					split[i] = strings.ReplaceAll(
@@ -227,7 +227,7 @@ func main() {
 				)
 				// Info(split)
 				var cmd *exec.Cmd
-				scriptPath := filepath.Join(datadir.Dir("stroy", false), "stroy.sh")
+				scriptPath := filepath.Join(datadir.Get("stroy", false), "stroy.sh")
 				helpers.EnsureDir(scriptPath)
 				if err = ioutil.WriteFile(
 					scriptPath,

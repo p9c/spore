@@ -7,9 +7,9 @@ import (
 	"runtime"
 	"syscall"
 	
-	qu "github.com/l0k18/OSaaS/pkg/util/quit"
+	qu "github.com/l0k18/spore/pkg/util/quit"
 	
-	"github.com/l0k18/OSaaS/pkg/comm/stdconn"
+	"github.com/l0k18/spore/pkg/comm/stdconn"
 )
 
 type Worker struct {

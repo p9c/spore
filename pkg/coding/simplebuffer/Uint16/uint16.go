@@ -5,7 +5,7 @@ import (
 	"net"
 	"strconv"
 
-	"github.com/l0k18/OSaaS/pkg/coding/simplebuffer"
+	"github.com/l0k18/spore/pkg/coding/simplebuffer"
 )
 
 type Uint16 struct {

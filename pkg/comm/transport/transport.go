@@ -10,7 +10,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/l0k18/OSaaS/pkg/coding/fec"
+	"github.com/l0k18/spore/pkg/coding/fec"
 )
 
 type HandleFunc map[string]func(ctx interface{}) func(b []byte) (err error)

@@ -1,4 +1,4 @@
-module github.com/l0k18/OSaaS
+module github.com/l0k18/spore
 
 go 1.14
 

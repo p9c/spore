@@ -1,6 +1,6 @@
 package spore
 
-import "github.com/l0k18/OSaaS/pkg/util/datadir"
+import "github.com/l0k18/spore/pkg/util/datadir"
 
 type Shell struct {
 	dataDir string

@@ -8,7 +8,7 @@ import (
 	"testing"
 	"unicode"
 	
-	"github.com/l0k18/OSaaS/pkg/util/datadir"
+	"github.com/l0k18/spore/pkg/util/datadir"
 )
 
 // TestAppDataDir tests the API for Get to ensure it gives expected results for various operating systems.

@@ -1,8 +1,8 @@
-# ![https://raw.githubusercontent.com/l0k18/OSaaS/main/docs/svg/logo.svg](https://raw.githubusercontent.com/l0k18/OSaaS/main/docs/svg/logo.svg) spore
+# ![https://raw.githubusercontent.com/l0k18/spore/main/docs/svg/logo.svg](https://raw.githubusercontent.com/l0k18/spore/main/docs/svg/logo.svg) spore
 
 ###### Operating System as a Service
 
-Building on the principles of distributed systems, and the legacy of Unix and Plan 9 operating systems, OSaaS aims to become a testbed for fracturing the concept of operating system completely.
+Building on the principles of distributed systems, and the legacy of Unix and Plan 9 operating systems, spore aims to become a testbed for fracturing the concept of operating system completely.
 
 # Specification
 

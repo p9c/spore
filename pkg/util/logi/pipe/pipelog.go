@@ -4,9 +4,9 @@ import (
 	"os"
 	"time"
 	
-	"github.com/l0k18/OSaaS/pkg/util/logi"
-	"github.com/l0k18/OSaaS/pkg/util/logi/pipe/consume"
-	qu "github.com/l0k18/OSaaS/pkg/util/quit"
+	"github.com/l0k18/spore/pkg/util/logi"
+	"github.com/l0k18/spore/pkg/util/logi/pipe/consume"
+	qu "github.com/l0k18/spore/pkg/util/quit"
 )
 
 func main() {

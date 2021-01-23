@@ -1,11 +1,11 @@
 package consume
 
 import (
-	"github.com/l0k18/OSaaS/pkg/comm/pipe"
-	"github.com/l0k18/OSaaS/pkg/comm/stdconn/worker"
-	"github.com/l0k18/OSaaS/pkg/util/logi"
-	"github.com/l0k18/OSaaS/pkg/util/logi/Entry"
-	qu "github.com/l0k18/OSaaS/pkg/util/quit"
+	"github.com/l0k18/spore/pkg/comm/pipe"
+	"github.com/l0k18/spore/pkg/comm/stdconn/worker"
+	"github.com/l0k18/spore/pkg/util/logi"
+	"github.com/l0k18/spore/pkg/util/logi/Entry"
+	qu "github.com/l0k18/spore/pkg/util/quit"
 )
 
 func FilterNone(string) bool {

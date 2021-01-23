@@ -4,11 +4,11 @@ import (
 	"io"
 	"os"
 	
-	"github.com/l0k18/OSaaS/pkg/comm/stdconn"
-	"github.com/l0k18/OSaaS/pkg/comm/stdconn/worker"
-	"github.com/l0k18/OSaaS/pkg/util/logi"
-	"github.com/l0k18/OSaaS/pkg/util/interrupt"
-	qu "github.com/l0k18/OSaaS/pkg/util/quit"
+	"github.com/l0k18/spore/pkg/comm/stdconn"
+	"github.com/l0k18/spore/pkg/comm/stdconn/worker"
+	"github.com/l0k18/spore/pkg/util/logi"
+	"github.com/l0k18/spore/pkg/util/interrupt"
+	qu "github.com/l0k18/spore/pkg/util/quit"
 )
 
 func Consume(quit qu.C, handler func([]byte) error, args ...string) *worker.Worker {

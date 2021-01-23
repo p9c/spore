@@ -4,8 +4,8 @@ import (
 	"crypto/rand"
 	"testing"
 
-	"github.com/l0k18/OSaaS/pkg/coding/alo"
-	"github.com/l0k18/OSaaS/pkg/util/logi"
+	"github.com/l0k18/spore/pkg/coding/alo"
+	"github.com/l0k18/spore/pkg/util/logi"
 )
 
 func MakeRandomBytes(size int, t *testing.T) (p []byte) {

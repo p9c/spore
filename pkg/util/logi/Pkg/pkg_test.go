@@ -3,7 +3,7 @@ package Pkg
 import (
 	"testing"
 	
-	"github.com/l0k18/OSaaS/pkg/util/logi/Pkg/Pk"
+	"github.com/l0k18/spore/pkg/util/logi/Pkg/Pk"
 )
 
 func TestPackage(t *testing.T) {

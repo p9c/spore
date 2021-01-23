@@ -10,11 +10,11 @@ import (
 	"strings"
 	"time"
 	
-	qu "github.com/l0k18/OSaaS/pkg/util/quit"
+	qu "github.com/l0k18/spore/pkg/util/quit"
 	
-	"github.com/l0k18/OSaaS/pkg/coding/fec"
-	"github.com/l0k18/OSaaS/pkg/coding/gcm"
-	"github.com/l0k18/OSaaS/pkg/comm/multicast"
+	"github.com/l0k18/spore/pkg/coding/fec"
+	"github.com/l0k18/spore/pkg/coding/gcm"
+	"github.com/l0k18/spore/pkg/comm/multicast"
 )
 
 const (

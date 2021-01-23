@@ -5,11 +5,11 @@ import (
 	"net"
 	"time"
 	
-	qu "github.com/l0k18/OSaaS/pkg/util/quit"
+	qu "github.com/l0k18/spore/pkg/util/quit"
 	
-	"github.com/l0k18/OSaaS/pkg/comm/transport"
-	log "github.com/l0k18/OSaaS/pkg/util/logi"
-	"github.com/l0k18/OSaaS/pkg/util/loop"
+	"github.com/l0k18/spore/pkg/comm/transport"
+	log "github.com/l0k18/spore/pkg/util/logi"
+	"github.com/l0k18/spore/pkg/util/loop"
 )
 
 const (

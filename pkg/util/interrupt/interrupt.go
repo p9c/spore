@@ -2,7 +2,7 @@ package interrupt
 
 import (
 	"fmt"
-	qu "github.com/l0k18/OSaaS/pkg/util/quit"
+	qu "github.com/l0k18/spore/pkg/util/quit"
 	"os"
 	"os/exec"
 	"os/signal"

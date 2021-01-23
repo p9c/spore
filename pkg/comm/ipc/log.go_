@@ -3,7 +3,7 @@ package ipc
 import (
 	"runtime"
 
-	"github.com/l0k18/OSaaS/pkg/logi"
+	"github.com/l0k18/spore/pkg/logi"
 )
 
 var pkg string

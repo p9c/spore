@@ -7,7 +7,7 @@ import (
 	"runtime"
 	"time"
 	
-	qu "github.com/l0k18/OSaaS/pkg/util/quit"
+	qu "github.com/l0k18/spore/pkg/util/quit"
 )
 
 type StdConn struct {
