@@ -6,7 +6,7 @@ Building on the principles of distributed systems, and the legacy of Unix and Pl
 
 # Specification
 
-The [specification](spec.md) is here
+The [specification](https://github.com/l0k18/spore/wiki/specification) is here
 
 # About
 
