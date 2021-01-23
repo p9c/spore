@@ -193,7 +193,7 @@ func main() {
 		} else {
 			datadir = filepath.Join(home, folderName)
 		}
-		if list, ok := commands[os.Args[1]]; ok {
+		if list, ok := Commands[os.Args[1]]; ok {
 			populateVersionFlags()
 			// Infos(list)
 			for i := range list {
@@ -214,7 +214,7 @@ func main() {
 					)
 				}
 				// Infos(split)
-				// add ldflags to commands that have this
+				// add ldflags to Commands that have this
 				// for i := range split {
 				// 	split[i] =
 				// 		Infof("'%s'", split[i])
@@ -256,10 +256,10 @@ func main() {
 		}
 	} else {
 		fmt.Println("no command requested, available:")
-		for i := range commands {
+		for i := range Commands {
 			fmt.Println(i)
-			for j := range commands[i] {
-				fmt.Println("\t" + commands[i][j])
+			for j := range Commands[i] {
+				fmt.Println("\t" + Commands[i][j])
 			}
 		}
 		fmt.Println()
@@ -327,18 +327,3 @@ func Warns(a interface{})  { logi.L.Warns(pkg, a) }
 func Infos(a interface{})  { logi.L.Infos(pkg, a) }
 func Debugs(a interface{}) { logi.L.Debugs(pkg, a) }
 func Traces(a interface{}) { logi.L.Traces(pkg, a) }
-
-var commands = map[string][]string{
-	"build": {
-		"go build -v",
-	},
-	"windows": {
-		`go build -v -ldflags="-H windowsgui \"%ldflags"\"`,
-	},
-	"tests": {
-		"go test ./...",
-	},
-	"stroy": {
-		"go install -v %ldflags ./stroy/.",
-	},
-}
