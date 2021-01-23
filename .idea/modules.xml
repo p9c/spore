@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/OSaaS.iml" filepath="$PROJECT_DIR$/.idea/OSaaS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/spore.iml" filepath="$PROJECT_DIR$/.idea/spore.iml" />
     </modules>
   </component>
 </project>

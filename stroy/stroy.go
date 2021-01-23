@@ -13,13 +13,13 @@ import (
 	"strings"
 	"time"
 	
-	"github.com/l0k18/OSaaS/pkg/appdata"
-	"github.com/l0k18/OSaaS/pkg/apputil"
+	"github.com/l0k18/OSaaS/pkg/util/datadir"
+	"github.com/l0k18/OSaaS/pkg/util/helpers"
 	
 	"gopkg.in/src-d/go-git.v4/plumbing"
 	"gopkg.in/src-d/go-git.v4/plumbing/storer"
 	
-	"github.com/l0k18/OSaaS/pkg/logi"
+	"github.com/l0k18/OSaaS/pkg/util/logi"
 )
 
 func populateVersionFlags() bool {
@@ -227,8 +227,8 @@ func main() {
 				)
 				// Info(split)
 				var cmd *exec.Cmd
-				scriptPath := filepath.Join(appdata.Dir("stroy", false), "stroy.sh")
-				apputil.EnsureDir(scriptPath)
+				scriptPath := filepath.Join(datadir.Dir("stroy", false), "stroy.sh")
+				helpers.EnsureDir(scriptPath)
 				if err = ioutil.WriteFile(
 					scriptPath,
 					[]byte(strings.Join(split, " ")),

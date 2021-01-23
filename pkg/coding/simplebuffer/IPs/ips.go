@@ -6,7 +6,7 @@ import (
 
 	"github.com/l0k18/OSaaS/pkg/coding/simplebuffer"
 	"github.com/l0k18/OSaaS/pkg/coding/simplebuffer/IP"
-	"github.com/l0k18/OSaaS/pkg/routeable"
+	"github.com/l0k18/OSaaS/pkg/comm/routeable"
 )
 
 type IPs struct {

@@ -5,7 +5,7 @@ import (
 	"net/rpc"
 	"os"
 	
-	qu "github.com/l0k18/OSaaS/pkg/quit"
+	qu "github.com/l0k18/OSaaS/pkg/util/quit"
 	
 	"github.com/l0k18/OSaaS/pkg/comm/stdconn"
 )

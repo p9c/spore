@@ -14,8 +14,8 @@ import (
 	"net"
 
 	"golang.org/x/net/ipv4"
-
-	"github.com/l0k18/OSaaS/pkg/routeable"
+	
+	"github.com/l0k18/OSaaS/pkg/comm/routeable"
 )
 
 func Conn(port int) (conn *net.UDPConn, err error) {

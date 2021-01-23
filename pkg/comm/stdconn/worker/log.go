@@ -2,8 +2,8 @@ package worker
 
 import (
 	"runtime"
-
-	"github.com/l0k18/OSaaS/pkg/logi"
+	
+	"github.com/l0k18/OSaaS/pkg/util/logi"
 )
 
 var pkg string

@@ -1,7 +1,7 @@
 package spore
 
 import (
-	"github.com/l0k18/OSaaS/pkg/logi"
+	"github.com/l0k18/OSaaS/pkg/util/logi"
 	"runtime"
 )
 

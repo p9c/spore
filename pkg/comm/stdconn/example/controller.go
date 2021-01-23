@@ -3,8 +3,8 @@ package main
 import (
 	"github.com/l0k18/OSaaS/pkg/comm/stdconn/example/hello/hello"
 	"github.com/l0k18/OSaaS/pkg/comm/stdconn/worker"
-	log "github.com/l0k18/OSaaS/pkg/logi"
-	qu "github.com/l0k18/OSaaS/pkg/quit"
+	log "github.com/l0k18/OSaaS/pkg/util/logi"
+	qu "github.com/l0k18/OSaaS/pkg/util/quit"
 )
 
 func main() {

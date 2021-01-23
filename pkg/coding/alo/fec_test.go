@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/l0k18/OSaaS/pkg/coding/alo"
-	"github.com/l0k18/OSaaS/pkg/logi"
+	"github.com/l0k18/OSaaS/pkg/util/logi"
 )
 
 func MakeRandomBytes(size int, t *testing.T) (p []byte) {
