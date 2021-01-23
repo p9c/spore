@@ -2,92 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5edafcca-a4b8-47a8-bc25-0c8b62bfb7ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/log.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/version/version.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/spore.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/spore.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/spore/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/spore/log.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmd/spore/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/spore/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/spore/spore.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/spore/spore.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/spec.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/spec.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/coding/alo/fec_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/coding/alo/fec_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/coding/alo/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/coding/alo/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/coding/fec/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/coding/fec/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/coding/gcm/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/coding/gcm/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/coding/qrcode/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/coding/qrcode/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/coding/simplebuffer/Byte/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/coding/simplebuffer/Byte/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/coding/simplebuffer/Bytes/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/coding/simplebuffer/Bytes/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/coding/simplebuffer/IP/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/coding/simplebuffer/IP/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/coding/simplebuffer/IPs/ips.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/coding/simplebuffer/IPs/ips.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/coding/simplebuffer/IPs/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/coding/simplebuffer/IPs/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/coding/simplebuffer/Int16/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/coding/simplebuffer/Int16/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/coding/simplebuffer/Int32/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/coding/simplebuffer/Int32/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/coding/simplebuffer/Int64/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/coding/simplebuffer/Int64/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/coding/simplebuffer/String/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/coding/simplebuffer/String/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/coding/simplebuffer/Time/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/coding/simplebuffer/Time/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/coding/simplebuffer/Uint16/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/coding/simplebuffer/Uint16/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/coding/simplebuffer/Uint16/uint16.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/coding/simplebuffer/Uint16/uint16.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/coding/simplebuffer/Uint32/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/coding/simplebuffer/Uint32/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/coding/simplebuffer/Uint64/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/coding/simplebuffer/Uint64/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/coding/simplebuffer/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/coding/simplebuffer/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/comm/ipc/log.go_" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/comm/ipc/log.go_" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/comm/multicast/channel.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/comm/multicast/channel.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/comm/multicast/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/comm/multicast/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/comm/pipe/example/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/comm/pipe/example/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/comm/pipe/example/serve/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/comm/pipe/example/serve/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/comm/pipe/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/comm/pipe/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/comm/pipe/pipe.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/comm/pipe/pipe.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/comm/routeable/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/comm/routeable/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/comm/stdconn/example/controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/comm/stdconn/example/controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/comm/stdconn/example/hello/hello/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/comm/stdconn/example/hello/hello/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/comm/stdconn/example/hello/implementation.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/comm/stdconn/example/hello/implementation.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/comm/stdconn/example/hello/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/comm/stdconn/example/hello/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/comm/stdconn/example/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/comm/stdconn/example/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/comm/stdconn/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/comm/stdconn/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/comm/stdconn/stdconn.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/comm/stdconn/stdconn.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/comm/stdconn/worker/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/comm/stdconn/worker/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/comm/stdconn/worker/worker.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/comm/stdconn/worker/worker.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/comm/transport/channels.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/comm/transport/channels.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/comm/transport/cmd/example/listenservemulticast.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/comm/transport/cmd/example/listenservemulticast.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/comm/transport/cmd/example/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/comm/transport/cmd/example/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/comm/transport/cmd/multicast/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/comm/transport/cmd/multicast/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/comm/transport/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/comm/transport/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/comm/transport/reuseport.go_" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/comm/transport/reuseport.go_" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/comm/transport/reuseport_windows.go_" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/comm/transport/reuseport_windows.go_" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/comm/transport/transport.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/comm/transport/transport.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/comm/upnp/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/comm/upnp/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/util/datadir/appdata_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/datadir/appdata_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/util/interrupt/cmd/ctrlctest.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/interrupt/cmd/ctrlctest.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/util/interrupt/interrupt.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/interrupt/interrupt.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/util/interrupt/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/interrupt/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/util/logi/Entry/entry.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/logi/Entry/entry.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/util/logi/Entry/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/logi/Entry/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/util/logi/Pkg/pkg.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/logi/Pkg/pkg.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/util/logi/Pkg/pkg_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/logi/Pkg/pkg_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/util/logi/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/logi/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/util/logi/example/demo.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/logi/example/demo.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/util/logi/example/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/logi/example/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/util/logi/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/logi/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/util/logi/pipe/consume/consume.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/logi/pipe/consume/consume.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/util/logi/pipe/consume/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/logi/pipe/consume/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/util/logi/pipe/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/logi/pipe/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/util/logi/pipe/pipelog.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/logi/pipe/pipelog.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/util/logi/pipe/serve/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/logi/pipe/serve/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/util/logi/pipe/serve/serve.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/logi/pipe/serve/serve.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/util/loop/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/loop/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/util/quit/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/quit/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/util/quit/quit.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/quit/quit.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stroy/commands.go" beforeDir="false" afterPath="$PROJECT_DIR$/stroy/commands.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stroy/stroy.go" beforeDir="false" afterPath="$PROJECT_DIR$/stroy/stroy.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stroy/stroy_windows.go" beforeDir="false" afterPath="$PROJECT_DIR$/stroy/stroy_windows.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/spec.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
