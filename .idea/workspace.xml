@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5edafcca-a4b8-47a8-bc25-0c8b62bfb7ce" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/docs/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/spore/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stroy/commands.go" beforeDir="false" afterPath="$PROJECT_DIR$/stroy/commands.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +55,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/spore" />
       <recent name="$PROJECT_DIR$/pkg/log" />
       <recent name="$PROJECT_DIR$/pkg/shell/scritch" />
       <recent name="$PROJECT_DIR$/pkg" />
