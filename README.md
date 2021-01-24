@@ -45,3 +45,6 @@ they can be started and stopped at will.
 
 Further, the controlling process can broker named pipes between processes, and eventually including ones with network
 transport phases in their connection.
+
+Final first phase of development is to implement a pipe transport for conveying Gio events to child processes and 
+return ops to render the display accordingly, including embedding from child processes inside child interfaces.
