@@ -3,14 +3,15 @@ package spore
 import (
 	"archive/tar"
 	"compress/gzip"
-	. "github.com/l0k18/sporeOS/pkg/log"
-	"github.com/l0k18/sporeOS/pkg/util"
 	"io"
 	"log"
 	"os"
 	"path/filepath"
 	"runtime"
 	"strings"
+	
+	. "github.com/l0k18/sporeOS/pkg/log"
+	"github.com/l0k18/sporeOS/pkg/util"
 )
 
 type Shell struct {

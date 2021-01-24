@@ -1,8 +1,9 @@
 package spore
 
 import (
-	. "github.com/l0k18/sporeOS/pkg/log"
 	"os"
+	
+	. "github.com/l0k18/sporeOS/pkg/log"
 )
 
 type CLI struct {

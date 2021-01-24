@@ -12,7 +12,7 @@ func NewGUI(s *Shell) *GUI {
 	return &GUI{Shell: s}
 }
 
-func (c *GUI) Run() int{
+func (c *GUI) Run() int {
 	Debug("running spore GUI")
 	return 0
 }

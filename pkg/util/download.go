@@ -3,13 +3,14 @@ package util
 import (
 	"crypto/sha256"
 	"encoding/hex"
-	. "github.com/l0k18/sporeOS/pkg/log"
 	"hash"
 	"io"
 	"net/http"
 	"os"
 	"path/filepath"
 	"strings"
+	
+	. "github.com/l0k18/sporeOS/pkg/log"
 )
 
 // DownloadFile will download a url to a local file. It's efficient because it
@@ -17,7 +18,8 @@ import (
 func DownloadFile(directory string, url string, hashS string) (writtenFileName string, err error) {
 	splitURL := strings.Split(url, "/")
 	writtenFileName = filepath.Join(directory, splitURL[len(splitURL)-1])
-	// check if the file exists and compute its' checksum - if it has the right checksum no need to download
+	// check if the file exists and compute its' checksum - if it has the right
+	// checksum no need to download
 	if FileExists(writtenFileName) {
 		var hasher hash.Hash
 		hasher = sha256.New()

@@ -2,16 +2,16 @@ package interrupt
 
 import (
 	"fmt"
-	. "github.com/l0k18/sporeOS/pkg/log"
-	qu "github.com/l0k18/sporeOS/pkg/quit"
 	"os"
 	"os/exec"
 	"os/signal"
 	"runtime"
 	"syscall"
 	
-	uberatomic "go.uber.org/atomic"
+	. "github.com/l0k18/sporeOS/pkg/log"
+	qu "github.com/l0k18/sporeOS/pkg/quit"
 	
+	uberatomic "go.uber.org/atomic"
 	
 	"github.com/kardianos/osext"
 )

@@ -1,8 +1,9 @@
 package main
 
 import (
-	. "github.com/l0k18/sporeOS/pkg/log"
 	"os"
+	
+	. "github.com/l0k18/sporeOS/pkg/log"
 )
 
 func main() {

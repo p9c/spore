@@ -11,14 +11,16 @@ import (
 	"github.com/l0k18/sporeOS/pkg/util"
 )
 
-// TestAppDataDir tests the API for Dir to ensure it gives expected results for various operating systems.
+// TestAppDataDir tests the API for Dir to ensure it gives expected results for
+// various operating systems.
 func TestAppDataDir(t *testing.T) {
 	// App name plus upper and lowercase variants.
 	appName := "myapp"
 	appNameUpper := string(unicode.ToUpper(rune(appName[0]))) + appName[1:]
 	appNameLower := string(unicode.ToLower(rune(appName[0]))) + appName[1:]
-	// When we're on Windows, set the expected local and roaming directories per the environment vars.  When we aren't
-	// on Windows, the function should return the current directory when forced to provide the Windows path since the
+	// When we're on Windows, set the expected local and roaming directories per the
+	// environment vars. When we aren't on Windows, the function should return the
+	// current directory when forced to provide the Windows path since the
 	// environment variables won't exist.
 	winLocal := "."
 	winRoaming := "."
@@ -47,7 +49,8 @@ func TestAppDataDir(t *testing.T) {
 		roaming bool
 		want    string
 	}{
-		// Various combinations of application name casing, leading period, operating system, and roaming flags.
+		// Various combinations of application name casing, leading period, operating
+		// system, and roaming flags.
 		{"windows", appNameLower, false, winLocal},
 		{"windows", appNameUpper, false, winLocal},
 		{"windows", "." + appNameLower, false, winLocal},
@@ -118,7 +121,8 @@ func TestAppDataDir(t *testing.T) {
 	}
 }
 
-// TstAppDataDir makes the internal appDataDir function available to the test package.
+// TstAppDataDir makes the internal appDataDir function available to the test
+// package.
 func TstAppDataDir(goos, appName string, roaming bool) string {
 	return util.GetDataDir(goos, appName, roaming)
 }

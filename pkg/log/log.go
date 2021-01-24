@@ -4,13 +4,15 @@ package log
 
 import (
 	"fmt"
-	"github.com/niubaoshu/gotiny"
 	"io"
 	"io/ioutil"
 	"os"
 	"runtime"
 	"strings"
 	"time"
+	
+	"github.com/davecgh/go-spew/spew"
+	"github.com/niubaoshu/gotiny"
 )
 
 type entry struct {
@@ -111,6 +113,43 @@ func prpipef(level, loc string, format string, a ...interface{}) {
 	)
 }
 
+// the following implement spew functions
+func sptty(level, loc string, a ...interface{}) bool {
+	if levels[level] > lvl {
+		return false
+	}
+	var split []string
+	for i := range a {
+		split = append(split, spew.Sdump(a[i]))
+	}
+	txt := strings.Join(split, " ")
+	// fmt.Fprintf(os.Stderr, "[%s]\n")
+	_, _ = fmt.Fprintln(tty, "["+level+"]", time.Now().Sub(start), loc)
+	_, _ = fmt.Fprintln(tty, " >>>", txt)
+	return true
+}
+func sppipe(level, loc string, a ...interface{}) {
+	if pipe == nil {
+		return
+	}
+	var split []string
+	for i := range a {
+		split = append(split, spew.Sdump(a[i]))
+	}
+	txt := strings.Join(split, "\n")
+	_, _ = pipe.Write(
+		gotiny.Marshal(
+			"log-v0.0.1",
+			entry{
+				time:    time.Now(),
+				level:   level,
+				loc:     loc,
+				message: txt,
+			},
+		),
+	)
+}
+
 func getLoc() string {
 	_, file, line, _ := runtime.Caller(2)
 	return fmt.Sprint(file, ":", line)
@@ -139,6 +178,32 @@ func Debug(a ...interface{}) {
 func Trace(a ...interface{}) {
 	if prtty("trace", getLoc(), a...) {
 		prpipe("trace", getLoc(), a...)
+	}
+}
+
+func Fatals(a ...interface{}) {
+	if sptty("fatal", getLoc(), a...) {
+		sppipe("fatal", getLoc(), a...)
+	}
+}
+func Errors(a ...interface{}) {
+	if sptty("error", getLoc(), a...) {
+		sppipe("error", getLoc(), a...)
+	}
+}
+func Infos(a ...interface{}) {
+	if sptty("info", getLoc(), a...) {
+		sppipe("info", getLoc(), a...)
+	}
+}
+func Debugs(a ...interface{}) {
+	if sptty("debug", getLoc(), a...) {
+		sppipe("debug", getLoc(), a...)
+	}
+}
+func Traces(a ...interface{}) {
+	if sptty("trace", getLoc(), a...) {
+		sppipe("trace", getLoc(), a...)
 	}
 }
 

@@ -2,7 +2,7 @@ package qu
 
 import (
 	"sync"
-
+	
 	. "github.com/l0k18/sporeOS/pkg/log"
 )
 
@@ -84,7 +84,6 @@ func GetLocForChan(c C) (s string) {
 	return
 }
 
-
 func RemoveClosedChans() {
 	Debug("cleaning up closed channels (more than 50 now closed)")
 	var c []C
@@ -109,7 +108,7 @@ func RemoveClosedChans() {
 }
 
 func PrintChanState() {
-
+	
 	// Debug(">>>>>>>>>>>")
 	for i := range createdChannels {
 		if i >= len(createdList) {
