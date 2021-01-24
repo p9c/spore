@@ -37,6 +37,7 @@ func SetLogLevel(level string) {
 
 var tty io.Writer = os.Stderr
 var pipe io.WriteCloser
+var start = time.Now()
 
 func SetPipeWriter(p io.WriteCloser) {
 	pipe = p
@@ -57,14 +58,14 @@ func prtty(level, loc string, a ...interface{}) bool {
 	if levels[level] > lvl {
 		return false
 	}
-	_, _ = fmt.Fprintln(tty, level, fmt.Sprint(a...), loc)
+	_, _ = fmt.Fprintln(tty, time.Now().Sub(start), level, fmt.Sprintln(a...), loc)
 	return true
 }
 func prttyf(level, loc string, format string, a ...interface{}) bool {
 	if levels[level] > lvl {
 		return false
 	}
-	_, _ = fmt.Fprintln(tty, level, fmt.Sprintf(format, a...))
+	_, _ = fmt.Fprintln(tty, time.Now().Sub(start), level, fmt.Sprintf(format, a...))
 	return true
 }
 
