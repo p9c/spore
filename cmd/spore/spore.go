@@ -73,8 +73,11 @@ func New() *Shell {
 	goenvCmd.Stderr = os.Stderr
 	goenvCmd.Stdin = os.Stdin
 	goenvCmd.Stdout = os.Stdout
+	// TODO: based on default values, set envs correctly in shell struct
 	if err = goenvCmd.Run(); Check(err) {
 	}
+	envs := strings.Join(os.Environ(), "\n")
+	Debug(envs)
 	return s
 }
 
