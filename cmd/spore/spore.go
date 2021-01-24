@@ -32,17 +32,15 @@ func New() *Shell {
 		Debug("download completed", wf)
 	}
 	gopath := filepath.Join(s.dataDir, "go")
-	if strings.HasSuffix(wf, ".tar.gz") {
-		// unpack the archive if it isn't already
-		if !util.FileExists(gopath) {
+	if !util.FileExists(gopath) {
+		if strings.HasSuffix(wf, ".tar.gz") {
+			// unpack the archive if it isn't already
 			Debug("unpacking archive")
 			var r *os.File
 			if r, err = os.Open(wf); !Check(err) {
 				util.ExtractTarGz(r, s.dataDir)
 			}
-		}
-	} else if strings.HasSuffix(wf, ".zip") {
-		if !util.FileExists(gopath) {
+		} else if strings.HasSuffix(wf, ".zip") {
 			Debug("unpacking archive")
 			if _, err = util.Unzip(wf, s.dataDir); Check(err) {
 			}
