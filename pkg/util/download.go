@@ -34,7 +34,24 @@ func DownloadFile(directory string, url string) (writtenFileName string, err err
 		}
 	}()
 	// Write the body to file
-	if _, err = io.Copy(out, resp.Body); Check(err) {
+	buf := make([]byte, 8192)
+	// tot := 0
+out:
+	for {
+		var n int
+		var rerr error
+		if n, rerr = resp.Body.Read(buf); Check(err) {
+		}
+		// tot += n
+		// Debug("read", n, "of", tot, "bytes from", url)
+		if _, err = out.Write(buf[:n]); Check(err) {
+		}
+		// Debug("wrote", n, "bytes of", tot, "to", writtenFileName)
+		if rerr == io.EOF {
+			break out
+		}
 	}
+	// if _, err = io.Copy(out, resp.Body); Check(err) {
+	// }
 	return
 }
