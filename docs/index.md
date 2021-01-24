@@ -1,8 +1,9 @@
-# ![https://raw.githubusercontent.com/l0k18/spore/main/docs/svg/logo.svg](https://raw.githubusercontent.com/l0k18/spore/main/docs/svg/logo.svg) spore
+# ![https://raw.githubusercontent.com/l0k18/sporeOS/main/pkg/logo/spore-icon.png](https://raw.githubusercontent.com/l0k18/sporeOS/main/pkg/logo/spore-icon.png) sporeOS
 
 ###### Operating System as a Service
 
-Building on the principles of distributed systems, and the legacy of Unix and Plan 9 operating systems, spore aims to become a testbed for fracturing the concept of operating system completely.
+Building on the principles of distributed systems, and the legacy of Unix and Plan 9 operating systems, spore aims to 
+become a testbed for fracturing the concept of operating system completely.
 
 # [Specification](https://github.com/l0k18/sporeOS/wiki/specification)
 
