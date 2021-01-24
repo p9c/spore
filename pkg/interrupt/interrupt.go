@@ -2,8 +2,8 @@ package interrupt
 
 import (
 	"fmt"
-	. "github.com/l0k18/spore/pkg/log"
-	qu "github.com/l0k18/spore/pkg/quit"
+	. "github.com/l0k18/sporeOS/pkg/log"
+	qu "github.com/l0k18/sporeOS/pkg/quit"
 	"os"
 	"os/exec"
 	"os/signal"

@@ -1,8 +1,8 @@
 package spore
 
 import (
-	. "github.com/l0k18/spore/pkg/log"
-	"github.com/l0k18/spore/pkg/util"
+	. "github.com/l0k18/sporeOS/pkg/log"
+	"github.com/l0k18/sporeOS/pkg/util"
 	"path/filepath"
 	"runtime"
 )

@@ -1,7 +1,7 @@
 package spore
 
 import (
-	. "github.com/l0k18/spore/pkg/log"
+	. "github.com/l0k18/sporeOS/pkg/log"
 	"os"
 )
 

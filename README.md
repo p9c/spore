@@ -4,7 +4,7 @@
 
 Building on the principles of distributed systems, and the legacy of Unix and Plan 9 operating systems, spore aims to become a testbed for fracturing the concept of operating system completely.
 
-# [Specification](https://github.com/l0k18/spore/wiki/specification) 
+# [Specification](https://github.com/l0k18/sporeOS/wiki/specification) 
 
 # About
 

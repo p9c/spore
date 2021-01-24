@@ -1,4 +1,4 @@
-module github.com/l0k18/spore
+module github.com/l0k18/sporeOS
 
 go 1.14
 

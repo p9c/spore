@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/l0k18/spore/cmd/spore"
-	. "github.com/l0k18/spore/pkg/log"
-	"github.com/l0k18/spore/version"
+	"github.com/l0k18/sporeOS/cmd/spore"
+	. "github.com/l0k18/sporeOS/pkg/log"
+	"github.com/l0k18/sporeOS/version"
 	"os"
 )
 

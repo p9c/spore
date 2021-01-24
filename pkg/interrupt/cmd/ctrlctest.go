@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	
-	"github.com/l0k18/spore/pkg/interrupt"
+	"github.com/l0k18/sporeOS/pkg/interrupt"
 )
 
 func main() {

@@ -3,7 +3,7 @@ package util
 import (
 	"crypto/sha256"
 	"encoding/hex"
-	. "github.com/l0k18/spore/pkg/log"
+	. "github.com/l0k18/sporeOS/pkg/log"
 	"hash"
 	"io"
 	"net/http"
@@ -12,8 +12,8 @@ import (
 	"strings"
 )
 
-// DownloadFile will download a url to a local file. It's efficient because it will
-// write as it downloads and not load the whole file into memory.
+// DownloadFile will download a url to a local file. It's efficient because it
+// will write as it downloads and not load the whole file into memory.
 func DownloadFile(directory string, url string, hashS string) (writtenFileName string, err error) {
 	splitURL := strings.Split(url, "/")
 	writtenFileName = filepath.Join(directory, splitURL[len(splitURL)-1])

@@ -9,6 +9,7 @@ import (
 	"io/ioutil"
 	"os"
 	"runtime"
+	"strings"
 	"time"
 )
 
@@ -58,14 +59,21 @@ func prtty(level, loc string, a ...interface{}) bool {
 	if levels[level] > lvl {
 		return false
 	}
-	_, _ = fmt.Fprintln(tty, time.Now().Sub(start), level, fmt.Sprintln(a...), loc)
+	var split []string
+	for i := range a {
+		split = append(split, fmt.Sprint(a[i]))
+	}
+	txt := strings.Join(split, " ")
+	// fmt.Fprintf(os.Stderr, "[%s]\n")
+	_, _ = fmt.Fprintln(tty, "["+level+"]", time.Now().Sub(start), loc)
+	_, _ = fmt.Fprintln(tty, " >>>", txt)
 	return true
 }
 func prttyf(level, loc string, format string, a ...interface{}) bool {
 	if levels[level] > lvl {
 		return false
 	}
-	_, _ = fmt.Fprintln(tty, time.Now().Sub(start), level, fmt.Sprintf(format, a...))
+	_, _ = fmt.Fprintln(tty, time.Now().Sub(start), level, loc, "\n", fmt.Sprintf(format, a...))
 	return true
 }
 
@@ -105,7 +113,7 @@ func prpipef(level, loc string, format string, a ...interface{}) {
 
 func getLoc() string {
 	_, file, line, _ := runtime.Caller(2)
-	return fmt.Sprintf("%s:%d", file, line)
+	return fmt.Sprint(file, ":", line)
 }
 
 func Fatal(a ...interface{}) {

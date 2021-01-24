@@ -8,7 +8,7 @@ import (
 	"testing"
 	"unicode"
 	
-	"github.com/l0k18/spore/pkg/util"
+	"github.com/l0k18/sporeOS/pkg/util"
 )
 
 // TestAppDataDir tests the API for Dir to ensure it gives expected results for various operating systems.
