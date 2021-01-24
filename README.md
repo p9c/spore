@@ -1,4 +1,4 @@
-# ![https://raw.githubusercontent.com/l0k18/spore/main/docs/svg/logo.svg](https://raw.githubusercontent.com/l0k18/spore/main/docs/svg/logo.svg) spore
+# ![https://raw.githubusercontent.com/l0k18/sporeOS/main/pkg/logo/spore-icon.png](https://raw.githubusercontent.com/l0k18/sporeOS/main/pkg/logo/spore-icon.png) sporeOS
 
 ###### Operating System as a Service
 
