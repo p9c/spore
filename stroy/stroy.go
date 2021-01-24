@@ -258,11 +258,6 @@ func main() {
 				fmt.Println("\t" + Commands[i][j])
 			}
 		}
-		fmt.Println()
-		fmt.Println(
-			"adding a second string to the commandline changes the name" +
-				" of the home folder selected in the scripts",
-		)
 	}
 }
 

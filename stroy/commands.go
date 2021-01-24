@@ -7,7 +7,7 @@ var Commands = map[string][]string{
 	"run": {
 		`go install -v %ldflags ./spore/.`,
 		`reset`,
-		`sporeOS`,
+		`spore`,
 	},
 	"hello": {
 		`go install -v %ldflags ./spore/.`,

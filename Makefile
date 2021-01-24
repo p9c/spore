@@ -3,3 +3,4 @@
 stroy:
 	go install -v ./stroy/.
 	stroy update
+	stroy

@@ -12,8 +12,6 @@ import (
 	
 	"gopkg.in/src-d/go-git.v4/plumbing"
 	"gopkg.in/src-d/go-git.v4/plumbing/storer"
-	
-	. "github.com/l0k18/sporeOS/pkg/log"
 )
 
 var WindowsExec = func(split []string) (out *exec.Cmd) {
@@ -261,11 +259,6 @@ func main() {
 				fmt.Println("\t" + Commands[i][j])
 			}
 		}
-		fmt.Println()
-		fmt.Println(
-			"adding a second string to the commandline changes the name" +
-				" of the home folder selected in the scripts",
-		)
 	}
 }
 
