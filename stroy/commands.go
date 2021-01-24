@@ -6,12 +6,10 @@ var Commands = map[string][]string{
 	},
 	"run": {
 		`go install -v %ldflags ./spore/.`,
-		`reset`,
 		`spore`,
 	},
 	"hello": {
 		`go install -v %ldflags ./spore/.`,
-		`reset`,
 		`spore github.com/l0k18/sporeOS/cmd/hello test`,
 	},
 	"windows": {

@@ -3,6 +3,7 @@ module github.com/l0k18/sporeOS
 go 1.14
 
 require (
+	github.com/davecgh/go-spew v1.1.1
 	github.com/kardianos/osext v0.0.0-20190222173326-2bc1f35cddc0
 	github.com/niubaoshu/gotiny v0.0.3
 	github.com/urfave/cli v1.22.5

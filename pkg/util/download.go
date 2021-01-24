@@ -55,18 +55,18 @@ func DownloadFile(directory string, url string, hashS string) (writtenFileName s
 	}()
 	// Write the body to file
 	buf := make([]byte, 8192)
-	// tot := 0
+	tot := 0
 out:
 	for {
 		var n int
 		var rerr error
 		if n, rerr = resp.Body.Read(buf); Check(err) {
 		}
-		// tot += n
-		// Debug("read", n, "of", tot, "bytes from", url)
+		tot += n
+		Debug("read", n, "of", tot, "bytes from", url)
 		if _, err = out.Write(buf[:n]); Check(err) {
 		}
-		// Debug("wrote", n, "bytes of", tot, "to", writtenFileName)
+		Debug("wrote", n, "bytes of", tot, "to", writtenFileName)
 		if rerr == io.EOF {
 			break out
 		}

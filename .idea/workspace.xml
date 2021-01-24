@@ -2,27 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5edafcca-a4b8-47a8-bc25-0c8b62bfb7ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/stroy/populate.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stroy/version.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/hello/hello.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/hello/hello.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/spore/cli.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/spore/cli.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/spore/gui.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/spore/gui.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmd/spore/spore.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/spore/spore.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/interrupt/interrupt.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/interrupt/interrupt.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/log/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/log/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/quit/quit.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/quit/quit.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/util/appdata.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/appdata.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/util/appdata_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/appdata_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/util/apputil.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/apputil.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pkg/util/download.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/download.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spore/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/spore/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stroy/stroy.go" beforeDir="false" afterPath="$PROJECT_DIR$/stroy/stroy.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stroy/stroy_windows.go" beforeDir="false" afterPath="$PROJECT_DIR$/stroy/stroy_windows.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stroy/commands.go" beforeDir="false" afterPath="$PROJECT_DIR$/stroy/commands.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +56,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="go.vgo" />
+    <property name="settings.editor.selected.configurable" value="go.sdk" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
