@@ -2,10 +2,11 @@ package main
 
 import (
 	"fmt"
+	"os"
+	
 	"github.com/l0k18/sporeOS/cmd/spore"
 	. "github.com/l0k18/sporeOS/pkg/log"
 	"github.com/l0k18/sporeOS/version"
-	"os"
 )
 
 func main() {
