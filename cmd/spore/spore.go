@@ -2,6 +2,7 @@ package spore
 
 import (
 	"os"
+	"os/exec"
 	"path/filepath"
 	"runtime"
 	"strings"
@@ -13,6 +14,8 @@ import (
 type Shell struct {
 	dataDir string
 	config  string
+	gobin   string
+	goexe   string
 }
 
 func New() *Shell {
@@ -32,6 +35,7 @@ func New() *Shell {
 		Debug("download completed", wf)
 	}
 	gopath := filepath.Join(s.dataDir, "go")
+	s.gobin = filepath.Join(gopath, "bin")
 	if !util.FileExists(gopath) {
 		if strings.HasSuffix(wf, ".tar.gz") {
 			// unpack the archive if it isn't already
@@ -45,6 +49,31 @@ func New() *Shell {
 			if _, err = util.Unzip(wf, s.dataDir); Check(err) {
 			}
 		}
+		// set all go binary files in the distribution to be executable (probably should
+		// fix the perms setting from unpack really)
+		var files []string
+		if err = filepath.Walk(
+			s.gobin, func(path string, info os.FileInfo, err error) error {
+				files = append(files, path)
+				return nil
+			},
+		); Check(err) {
+		}
+		for i := range files {
+			if err = os.Chmod(files[i], 0550); Check(err) {
+			}
+		}
+	}
+	goexe := "go"
+	if runtime.GOOS == "windows" {
+		goexe = "go.exe"
+	}
+	s.goexe = filepath.Join(s.gobin, goexe)
+	goenvCmd := exec.Command(s.goexe, "env")
+	goenvCmd.Stderr = os.Stderr
+	goenvCmd.Stdin = os.Stdin
+	goenvCmd.Stdout = os.Stdout
+	if err = goenvCmd.Run(); Check(err) {
 	}
 	return s
 }
