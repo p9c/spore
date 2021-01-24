@@ -1,10 +1,16 @@
 package spore
 
 import (
+	"archive/tar"
+	"compress/gzip"
 	. "github.com/l0k18/sporeOS/pkg/log"
 	"github.com/l0k18/sporeOS/pkg/util"
+	"io"
+	"log"
+	"os"
 	"path/filepath"
 	"runtime"
+	"strings"
 )
 
 type Shell struct {
@@ -21,14 +27,77 @@ func New() *Shell {
 	util.EnsureDir(s.config)
 	var err error
 	Debug(runtime.GOOS, runtime.GOARCH)
+	var wf string
 	if info, ok := goVersions[runtime.GOOS][runtime.GOARCH]; ok {
 		Debug("downloading go", info)
-		var wf string
 		if wf, err = util.DownloadFile(s.dataDir, info.url, info.hash); Check(err) {
 		}
 		Debug("download completed", wf)
+		if strings.HasSuffix(wf, ".tar.gz") {
+			// unpack the archive if it isn't already
+			gopath := filepath.Join(s.dataDir, "go")
+			if !util.FileExists(gopath) {
+				Debug("unpacking archive")
+				var r *os.File
+				if r, err = os.Open(wf); !Check(err) {
+					ExtractTarGz(r, s.dataDir)
+				}
+			}
+		}
 	}
 	return s
+}
+
+func ExtractTarGz(gzipStream io.Reader, prefix string) {
+	uncompressedStream, err := gzip.NewReader(gzipStream)
+	if err != nil {
+		Fatal("ExtractTarGz: NewReader failed")
+	}
+	tarReader := tar.NewReader(uncompressedStream)
+	var header *tar.Header
+out:
+	for {
+		header, err = tarReader.Next()
+		if err == io.EOF {
+			break
+		}
+		if err != nil {
+			Fatalf("ExtractTarGz: Next() failed: %s", err.Error())
+			break
+		}
+		
+		switch header.Typeflag {
+		case tar.TypeDir:
+			// util.EnsureDir(filepath.Join(prefix, header.Name))
+			// if err = os.Mkdir(head	er.Name, 0755); err != nil {
+			// 	Fatalf("ExtractTarGz: Mkdir() failed: %s", err.Error())
+			// 	break out
+			// }
+		case tar.TypeReg:
+			var outFile *os.File
+			fp := filepath.Join(prefix, header.Name)
+			util.EnsureDir(fp)
+			outFile, err = os.Create(fp)
+			if err != nil {
+				Fatalf("ExtractTarGz: Create() failed: %s", err.Error())
+				break out
+			}
+			if _, err = io.Copy(outFile, tarReader); err != nil {
+				Fatalf("ExtractTarGz: Copy() failed: %s", err.Error())
+				break out
+			}
+			if err = outFile.Close(); Check(err) {
+				break out
+			}
+		default:
+			log.Fatalf(
+				"ExtractTarGz: uknown type: %v in %s",
+				header.Typeflag,
+				header.Name,
+			)
+		}
+		
+	}
 }
 
 type downloadInfo struct {

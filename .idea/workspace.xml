@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5edafcca-a4b8-47a8-bc25-0c8b62bfb7ce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stroy/commands.go" beforeDir="false" afterPath="$PROJECT_DIR$/stroy/commands.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stroy/stroy.go" beforeDir="false" afterPath="$PROJECT_DIR$/stroy/stroy.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stroy/stroy_windows.go" beforeDir="false" afterPath="$PROJECT_DIR$/stroy/stroy_windows.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/spore/spore.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/spore/spore.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
