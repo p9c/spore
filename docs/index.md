@@ -2,8 +2,11 @@
 
 ###### Operating System as a Service
 
-Building on the principles of distributed systems, and the legacy of Unix and Plan 9 operating systems, spore aims to 
-become a testbed for fracturing the concept of operating system completely.
+Building on the principles of distributed systems, and the legacy of Unix and Plan 9 operating systems, spore aims to become a testbed for fracturing the concept of operating system completely.
+
+[![github](https://img.shields.io/badge/github-page-yellow.svg)](https://l0k18.github.io/sporeOS)
+[![GoDoc](https://img.shields.io/badge/godoc-documentation-blue.svg)](https://godoc.org/github.com/l0k18/sporeOS)
+[![GoDoc](https://img.shields.io/badge/chat-telegram-white.svg)](https://t.me/sporeOS)
 
 # [Specification](https://github.com/l0k18/sporeOS/wiki/specification)
 
