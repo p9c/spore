@@ -1,7 +1,10 @@
 package util
 
 import (
+	"crypto/sha256"
+	"encoding/hex"
 	. "github.com/l0k18/spore/pkg/log"
+	"hash"
 	"io"
 	"net/http"
 	"os"
@@ -11,9 +14,24 @@ import (
 
 // DownloadFile will download a url to a local file. It's efficient because it will
 // write as it downloads and not load the whole file into memory.
-func DownloadFile(directory string, url string) (writtenFileName string, err error) {
+func DownloadFile(directory string, url string, hashS string) (writtenFileName string, err error) {
 	splitURL := strings.Split(url, "/")
 	writtenFileName = filepath.Join(directory, splitURL[len(splitURL)-1])
+	// check if the file exists and compute its' checksum - if it has the right checksum no need to download
+	if FileExists(writtenFileName) {
+		var hasher hash.Hash
+		hasher = sha256.New()
+		var f *os.File
+		if f, err = os.Open(writtenFileName); !Check(err) {
+			if _, err = io.Copy(hasher, f); !Check(err) {
+				if hex.EncodeToString(hasher.Sum(nil)) == hashS {
+					// no need to download it as it is already correct
+					Debug("file already downloaded")
+					return
+				}
+			}
+		}
+	}
 	// Get the data
 	var resp *http.Response
 	resp, err = http.Get(url)

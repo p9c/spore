@@ -24,7 +24,7 @@ func New() *Shell {
 	if info, ok := goVersions[runtime.GOOS][runtime.GOARCH]; ok {
 		Debug("downloading go", info)
 		var wf string
-		if wf, err = util.DownloadFile(s.dataDir, info.url); Check(err) {
+		if wf, err = util.DownloadFile(s.dataDir, info.url, info.hash); Check(err) {
 		}
 		Debug("download completed", wf)
 	}
